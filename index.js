@@ -3,13 +3,12 @@ const port = 3000;
 
 const app = express();
 
-app.post("/conversations", (req, res) => {
-  console.log(req.headers["authorization"]);
+app.get("/conversations", (req, res) => {
+  console.log(req.headers);
   res.send("<b>2+2=4<b>");
 });
 
 app.get("/", (req, res) => {
-  console.log(req.headers["authorization"]);
   res.send("<b>Hello World!<b>");
 });
 
